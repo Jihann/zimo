@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //浏览器宿主的全局环境中，this指的是window对象。
+        console.log(this === window);
+        //浏览器中在全局环境下，使用var声明变量其实就是赋值给this或window。
+        var info = "Hello World";
+        console.log(this.info);
+        console.log(window.info);
+        console.log(this.info === window.info); //true
+    </script>
+    <script type="text/javascript">
+        //任何情况下，创建变量时没有使用var或者let(ECMAScript 6)，也是在操作全局this
+        username = "ZhangSan";
+        function test() {
+            username = "Jihann";
+        }
+        console.log(this.username); //ZhangSan
+        test();
+        console.log(this.username); //Jihann
+    </script>
+</head>
+<body>
+<span>详解this</span>
+</body>
+</html>
