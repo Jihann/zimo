@@ -22,6 +22,27 @@
         test();
         console.log(this.username); //Jihann
     </script>
+    <script type="text/javascript">
+        //函数正常被调用（不带new）时，里面的this指向的是全局作用域
+        foo = "bar";
+        function testThis() {
+            "use strict";
+            this.foo = "foo";
+        }
+        console.log(this.foo); //bar
+        testThis();//Cannot set property 'foo' of undefined
+    </script>
+    <script type="text/javascript">
+        //当用调用函数时使用了new关键字，此刻this指代一个新的上下文，不再指向全局this。
+        foo = "bar";
+        function TestThis() {
+            this.foo = "foo";
+        }
+        console.log(this.foo); //bar
+        new TestThis();
+        console.log(this.foo); //bar
+        console.log(new TestThis().foo); //foo
+    </script>
 </head>
 <body>
 <span>详解this</span>
