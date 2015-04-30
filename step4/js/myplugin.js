@@ -3,15 +3,15 @@
  * 优化插件代码，采用OO形式
  */
 ;(function(jQuery, window, undefined) {
-    var Beautifier = function(ele, opt) {
+    var Beautifier = function(ele, settings) {
         this.$element = ele;
-        opt = opt !== undefined ? opt : undefined;
+        settings = settings !== undefined ? settings : undefined;
         this.defaults = {
             color : 'red',
             fontSize : '12px',
             textDecoration : 'none'
         };
-        this.options = jQuery.extend({}, this.defaults, opt);
+        this.options = jQuery.extend({}, this.defaults, settings);
     };
 
     //定义方法
