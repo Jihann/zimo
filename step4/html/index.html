@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SB如何练成</title>
+    <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.myplugin.js"></script>
+    <script type="text/javascript">
+        jQuery.extend({
+            sayHello : function(name) {
+                console.log('Hello,' + (name || 'Jihann') + '!');
+            }
+        });
+        jQuery.sayHello();
+        jQuery.sayHello('ZhangSan');
+        //自定义log
+        jQuery.extend({
+           log : function(message) {
+               var date = new Date(),
+                       year = date.getFullYear(),
+                       month = date.getMonth(),
+                       day = date.getDate(),
+                       hour = date.getHours(),
+                       min = date.getMinutes(),
+                       seconds = date.getSeconds();
+               var time = year + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' +seconds;
+               console.log(time + ' SB: ' + message);
+           }
+        });
+        //调用
+        jQuery.log('------------正在诠释SB的含义，请稍后...----------');
+    </script>
+    <script type="text/javascript">
+        jQuery(function() {
+            console.log("--------------------------------------------------------");
+            var tips = ['fuck you','别乱填，你以为本大神我好糊弄？','什么？你觉得很无聊？哈哈哈，我就是喜欢无聊！','快填，乖哈，小屁孩，只要听叔叔的话，叔叔就买糖给你吃！'];
+            jQuery('a').myPlugin();
+            alert("呵");
+            test1();
+            test1().test2().test3().test4().test5().test6().test7().test8().test9().test10().test11().test12().test13().test14().test15();
+           function fuck() {
+                var name = prompt("快在下面输入框填入'我是傻逼'","");
+                if(name === "我是傻逼") {
+                    alert("恩，真听话，这就对了嘛！");
+                    return{
+                        test17 : function() {
+                            alert("想不到平时放荡不羁的你，今天也能服服帖帖的！");
+                            return{
+                                test18 : function() {
+                                    alert("哈哈哈哈哈，（仰天长笑中....）");
+                                    return{
+                                        test19 : function() {
+                                            alert("哈哈哈哈哈，（继续仰天长笑中....）");
+                                            return{
+                                                test20 : function() {
+                                                    alert("哈哈哈哈哈，（还在仰天长笑中....）");
+                                                    return{
+                                                        test21 : function() {
+                                                            alert("哦哦哦，都笑忘了，还要带你出去了！");
+                                                            return{
+                                                                test22 : function() {
+                                                                    alert("最后祝你天天快乐！");
+                                                                    return{
+                                                                        test23 : function() {
+                                                                            alert("记得，要想我，下次见！");
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    var index = Math.floor(Math.random() * tips.length);
+                    alert(tips[index]);
+                    try{
+                        fuck().test17().test18().test19().test20().test21().test22().test23();
+                    }catch(e) {
+                        console.log('-------------info-----------');
+                    }
+                }
+            }
+            function test1() {
+                return{
+                    test2 : function() {
+                        alert("呵呵");
+                        alert("呵呵呵");
+                        return{
+                            test3 : function() {
+                                alert("有没有感到一丝诡异？");
+                                return{
+                                    test4 : function() {
+                                        alert("呵呵");
+                                        return{
+                                            test5 : function() {
+                                                alert("感到诡异就对了！啊哈哈哈");
+                                                return{
+                                                    test6 : function() {
+                                                        alert("因为你被整了~！继续啊哈哈哈");
+                                                        return{
+                                                            test7 : function() {
+                                                                alert("什么？你说你已经猜到怎么整你了？fuck");
+                                                                return{
+                                                                    test8 : function() {
+                                                                        alert("你以为就是不听的弹窗？让你多点一下？fuck");
+                                                                        return{
+                                                                            test9 : function() {
+                                                                                alert("No! No! No!");
+                                                                                return{
+                                                                                    test10 : function() {
+                                                                                        alert("这次咱们玩高端点，不折腾你的手指头了！啊哈哈哈");
+                                                                                        return{
+                                                                                            test11 : function() {
+                                                                                                alert("只要你听话，一会儿就能出去了，乖乖的哦！~");
+                                                                                                return{
+                                                                                                    test12 : function() {
+                                                                                                        alert("要是不听话么....呵呵呵...很阴森。哇咔咔咔咔");
+                                                                                                        return{
+                                                                                                            test13 : function() {
+                                                                                                                alert("听什么话，当然是听我话！");
+                                                                                                                return{
+                                                                                                                    test14 : function() {
+                                                                                                                        alert("我让你说什么，你就说什么！哇咔咔");
+                                                                                                                        return{
+                                                                                                                            test15 : function() {
+                                                                                                                                alert("再点击一下，在那个输入框里面填《我是傻逼》,我就立马放你出去");
+                                                                                                                                try{
+                                                                                                                                    fuck().test17().test18().test19().test20().test21().test22().test23();
+                                                                                                                                }catch(e) {
+                                                                                                                                    console.log('-------------info-----------');
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<span>SB的自我修养</span>
+<ul>
+    <li>
+        <a href="#">教你怎么做一个很屌的SB</a>
+    </li>
+    <li>
+        <a href="#">SB是不需要解释的</a>
+    </li>
+    <li>
+        <a href="#">SB是一种流行元素</a>
+    </li>
+</ul>
+<p>SBSB，我不会受影响</p>
+</body>
+</html>

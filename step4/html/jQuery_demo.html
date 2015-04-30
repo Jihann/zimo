@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery 插件开发</title>
+    <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="../js/jquery.myplugin.js"></script>-->
+    <script type="text/javascript" src="../js/myplugin.js"></script>
+    <script type="text/javascript">
+        jQuery.extend({
+            sayHello : function(name) {
+                console.log('Hello,' + (name || 'Jihann') + '!');
+            }
+        });
+        jQuery.sayHello();
+        jQuery.sayHello('ZhangSan');
+        //自定义log
+        jQuery.extend({
+           log : function(message) {
+               var date = new Date(),
+                       year = date.getFullYear(),
+                       month = date.getMonth(),
+                       day = date.getDate(),
+                       hour = date.getHours(),
+                       min = date.getMinutes(),
+                       seconds = date.getSeconds();
+               var time = year + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' +seconds;
+               console.log(time + ' jipiao: ' + message);
+           }
+        });
+        //调用
+        jQuery.log('------------正在下单，请稍后...----------');
+    </script>
+    <script type="text/javascript">
+        jQuery(function() {
+            console.log("--------------------------------------------------------");
+            //jQuery('a').hide().show().myPlugin();
+            jQuery('a').myPlugin({
+                color : '#2C9929',
+                fontSize : '16px'
+            });
+            //jQuery('a').myPlugin();
+        });
+    </script>
+</head>
+<body>
+<span>jQuery插件开发</span>
+<ul>
+    <li>
+        <a href="http://www.baidu.com">左耳</a>
+    </li>
+    <li>
+        <a href="http://www.baiud.com">初恋那件小事</a>
+    </li>
+    <li>
+        <a href="http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/">平凡之路</a>
+    </li>
+</ul>
+<p>这是p标签不是a标签，我不会受影响</p>
+</body>
+</html>
