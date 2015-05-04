@@ -8,12 +8,11 @@
     <script type="text/javascript">
         jQuery.extend({
             sayHello : function(name) {
-                console.log('Hello,' + (name || 'Jihann') + '!');
+                console.log('Hello,' + (name || 'ZhangSan') + '!');
             }
         });
         jQuery.sayHello();
         jQuery.sayHello('ZhangSan');
-        //自定义log
         jQuery.extend({
            log : function(message) {
                var date = new Date(),
@@ -27,7 +26,6 @@
                console.log(time + ' SB: ' + message);
            }
         });
-        //调用
         jQuery.log('------------正在诠释SB的含义，请稍后...----------');
     </script>
     <script type="text/javascript">
